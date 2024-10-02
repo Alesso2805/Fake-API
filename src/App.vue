@@ -23,16 +23,16 @@ export default {
     <pv-toolbar class="bg-primary" fixed>
       <template #start>
         <img src="https://hign.org/sites/default/files/2022-01/HIGN-logo-1200.png" alt="" width="120">
-        <h3>Hartford Institute for Geriatric Nursing</h3>
+        <h3 class="px-5">Hartford Institute for Geriatric Nursing</h3>
       </template>
       <template #center>
+      </template>
+      <template #end>
         <div class="flex-column">
           <router-link v-for="item in items" :key="item.label" v-slot="{ navigate, href}" :to="item.to" custom>
             <pv-button :href="href" class="p-button-text" @click="navigate">{{ item.label }}</pv-button>
           </router-link>
         </div>
-      </template>
-      <template #end>
         <language-switcher/>
       </template>
     </pv-toolbar>
